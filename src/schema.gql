@@ -5,10 +5,11 @@
 type Coffee {
   brand: String!
   flavors: [String!]!
-  id: Float!
+  id: ID!
   name: String!
 }
 
 type Query {
+  coffee(id: ID!): Coffee
   coffees: [Coffee!]!
 }
