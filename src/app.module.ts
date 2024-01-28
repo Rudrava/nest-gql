@@ -12,6 +12,9 @@ import { CoffeesModule } from './coffees/coffees.module';
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       sortSchema: true,
+      buildSchemaOptions: {
+        numberScalarMode: 'integer',
+      },
     }),
     CoffeesModule,
   ],
