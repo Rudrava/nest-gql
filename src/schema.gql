@@ -9,6 +9,16 @@ type Coffee {
   name: String!
 }
 
+input CreateCoffeeDto {
+  brand: String!
+  flavors: [String!]!
+  name: String!
+}
+
+type Mutation {
+  createCoffee(coffeeInput: CreateCoffeeDto!): Coffee
+}
+
 type Query {
   coffee(id: ID!): Coffee
   coffees: [Coffee!]!
